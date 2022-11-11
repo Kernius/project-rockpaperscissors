@@ -38,32 +38,30 @@ button.addEventListener('click', function (e)  {
         const playerSelection = e.target;
         const computerSelection = getComputerChoice();
         const result = playRound(playerSelection,computerSelection);
+        if (playerPoints === 3 || computerPoints === 3) {    
+            return;
+        }
         
-            if(result.includes("You win") ) {
-                playerPoints++;
-            } else if (result.includes("You lost") ) {
-                computerPoints++;
-            }
+        if(result.includes("You win") ) {
+            playerPoints++;
+        } else if (result.includes("You lost") ) {
+            computerPoints++;
+        }
+        
         const userscore = document.querySelector('#userscore');
-        const computerscore = document.querySelector('#computerscore');
+        const computerscore = document.querySelector('#computerscore'); 
+        const roundoutcome = document.querySelector('#roundoutcome');
+        const matchoutcome = document.querySelector('#matchoutcome');
 
-
-            console.log("Your score:" + playerPoints);
-            console.log("Computers score:" + computerPoints);
-            console.log(playRound(playerSelection,computerSelection))
-
-            if (playerPoints === 3) {
-                console.log("You have won the match!");
-                for (const button of buttons) {
-                    button.disabled = true;
-                }
-                
-            } else if (computerPoints === 3) {
-                console.log("You have lost the match!");
-                for (const button of buttons) {
-                    button.disabled = true;
-                }
-            }
+        userscore.textContent = "Your score :" + playerPoints;
+        computerscore.textContent = "Computers score :" + computerPoints;
+        roundoutcome.textContent = playRound(playerSelection,computerSelection);
+        
+        if (playerPoints === 3) {
+            matchoutcome.textContent = "You have won the match!";
+        } else if (computerPoints === 3) {
+            matchoutcome.textContent = "You have lost the match!";
+        }
  });
 });
 
@@ -72,7 +70,6 @@ button.addEventListener('click', function (e)  {
 const restart = document.querySelector('#Restart');
         restart.addEventListener('click', () => {
             window.location.reload();
-        
         });
 
 
