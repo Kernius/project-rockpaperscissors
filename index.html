@@ -9,22 +9,42 @@
     <script src="myscripts.js" defer></script>
 </head>
 <body>
-    <button id="Restart">Play Again</button>
 
-    <div id="userscore"></div>
-    <div id="computerscore"></div>
-    <div id="roundoutcome"></div>
-    <div id="matchoutcome"></div>
+    
+
+   
+    <div class="header">
+        <div class="htext">Choose your weapon! Rock, Paper or Scissors?</div>
+    </div>
+    
+
 
     <div class="container">
+    
     <div class="topselection"><img src="Images/rock.png" id="Rock" class = "btn">
         <img src ="Images/paper.png" id="Paper" class = "btn">
         <img src ="Images/scissors.png" id="Scissors" class = "btn"></div>
-    <div class="players">  
-    <div class="leftplayer"></div> 
-    <div class="rightcomputer"></div>
+    
+    <div class="players">
+    
+    <div class="leftside"> 
+    <div class="playerlogo"><img class = "warrior" src = "Images/player.png"></div> 
+    <div id="userscore"></div>
+    </div>
+
+    <div id="roundoutcome"></div>
+
+    <div class="rightside">
+    <div class="computerlogo"><img class ="robot" src ="Images/computer.png"></div>
+    <div id="computerscore"></div>
+    </div>
+
     </div> 
-    <div class="bottominfo"></div>
+
+    <div class="bottominfo">
+    <div id="matchoutcome"></div>
+    <button disabled="true" id="Restart">Play Again</button>
+    </div>
     </div>
 
 </body>
