@@ -32,6 +32,9 @@ width:20vw;
 align-items:center;
 border-radius:0.8vw;
 justify-content:center;
+background-color:gray;
+opacity: 0.7;
+box-shadow: 4px 4px rgb(31, 31, 31);
 }
 
 .rightside {
@@ -42,6 +45,9 @@ width:20vw;
 align-items:center;
 border-radius:0.8vw;
 justify-content:center;
+background-color:gray;
+opacity: 0.7;
+box-shadow: 4px 4px rgb(31, 31, 31); 
 }
 
 .topselection {
